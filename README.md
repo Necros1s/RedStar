@@ -1,0 +1,2 @@
+# RedStar OS dot files
+

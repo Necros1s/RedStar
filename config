@@ -1,0 +1,96 @@
+[colors]
+
+background = #1d1f21
+foreground = #ffffff
+alt-foreground = #848484
+red-foreground = #af0000 
+
+[bar/bar]
+enable-ipc=true
+height = 30
+width = 85%
+offset-x = 7%
+offset-y = 0.5%
+radius = 15
+border-size = 0
+border-color = ${colors.background}
+module-margin = 1
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+alt-foreground = ${colors.alt-foreground}
+
+line-size = 1
+padding = 5
+
+font-0=Dina:size=11:antialias=true;2
+font-1=SauceCodePro Nerd Font:size=10:antialias=true;2
+
+modules-left = xwindow
+modules-center = xworkspaces
+modules-right = battery time
+
+scroll-up = bspwn-wsnext
+scroll-down = bspwn-wsprev
+
+wm-restack = bspwm
+override-redirect = false
+
+[module/xworkspaces]
+type = internal/xworkspaces
+pin-workspaces = false
+enable-click = true
+enable-scroll = true
+format-padding = 1
+
+icon-default = 
+
+format = <label-state>
+format-background = ${colors.background}
+label-active = 
+label-occupied = 
+label-urgent = 
+label-empty = 
+
+label-empty-padding = 1
+label-active-padding = 1
+label-urgent-padding = 1
+label-occupied-padding = 1
+
+label-empty-foreground = ${colors.foreground}
+label-active-foreground = ${colors.red-foreground}
+label-urgent-foreground = ${colors.red-foreground}
+label-occupied-foreground = ${colors.alt-foreground}
+
+[module/xwindow]
+type = internal/xwindow
+format = <label>
+format-background = ${colors.background}
+format-foreground = ${colors.foreground}
+label = %title%
+label-maxlen = 35
+label-empty = Empty
+
+[module/battery]
+type = internal/battery
+full-at = 99
+battery = BAT1
+adapter = AC
+poll-interval = 2
+time-formate = %H:%M
+format-charging = <label-charging>
+format-discharging = <label-discharging>
+label-charging =  %percentage%%
+label-discharging =  %percentage%%
+
+[module/time]
+type = internal/date
+interval = 10
+format-margin = 0
+
+time = "%I:%M"
+date = "%a %d"
+
+label = %time%
+label-foreground = ${colors.foreground}
+label-background = ${colors.background}
