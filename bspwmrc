@@ -6,7 +6,8 @@ xsetroot -cursor_name left_ptr &
 dunst &
 mpd-notify &
 xautolock -time 10 -locker slimlock &
-feh --bg-scale /usr/share/wallpapers/Gray.png  &
+#feh --bg-scale /usr/share/wallpapers/Gray.png  &
+hsetroot -add '#848484' -add '#1d1f21' -gradient '0'
 synclient TapButton1=1 TapButton2=3 TapButton3=2 & #For laptop touchpad
 xset -b & #For annoying beeping sounds
 sxhkd & 
@@ -39,6 +40,10 @@ bspc rule -a * state=floating
 bspc rule -a kitty state=floating
 bspc rule -a virt-manager state=floating
 bspc rule -a firefox state=floating
+bspc rule -a gimp state=floating
+bspc rule -a Gimp state=floating
+bspc rule -a Feh state=floating
+bspc rule -a feh state=floating
 #bspc rule -a kitty desktop='^1' follow=on
 #bspc rule -a Subl3 desktop='^2' follow=on
 #bspc rule -a Firefox desktop='^3' follow=on
