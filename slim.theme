@@ -25,9 +25,9 @@ background_color        #f2f2f2
 
 input_panel_x           50%
 input_panel_y           75%
-input_name_x            165
+input_name_x            170
 input_name_y            250
-input_pass_x            165
+input_pass_x            170
 input_pass_y            310
 input_font              Cherry:size=13:bold:dpi=75
 input_color             #000000
